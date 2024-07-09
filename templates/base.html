@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자율주행 자동차 정책 플랫폼</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>자율주행 자동차 정책 플랫폼</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">홈</a></li>
+                <li><a href="{{ url_for('policy') }}">법제도 및 정책</a></li>
+                <li><a href="{{ url_for('research') }}">탐구주제</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 자율주행 자동차 정책 플랫폼</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
